@@ -1,5 +1,3 @@
-import common
-
 from board import Board
 from ship import Ship
 
