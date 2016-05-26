@@ -28,7 +28,6 @@ def print_board_heading():
 
 def print_board(board):
     print_board_heading()
-
     row_num = 1
     for row in board:
         print(str(row_num).rjust(2) + " " + (" ".join(row)))
@@ -314,7 +313,7 @@ def game():
     # Players place their ships.
     for player in players:
         put_ships(player=player)
-    input("The Battle begins! {} is first to shoot. "
+    input("The Battle begins! {} is the first to shoot. "
           "Press enter to continue.".format(players[0].name))
     clear_screen()
     # Players take turns.
@@ -332,15 +331,16 @@ def game():
                     board2=player.guess_board.board
                 )
                 print(message)
-                input('{} wins with only {} missiles launched! '
-                      'Press enter to exit the game. '.format(
+                input(
+                    '{} wins with only {} missiles launched! '
+                    'Press enter to exit the game. '.format(
                         player.name,
                         int((step + 1) / 2)
                     )
                 )
                 exit()
             else:
-                clear_and_print_one_board(board=player.guess_board.board)
+                clear_screen()
                 print(message)
 
 

@@ -1,4 +1,4 @@
-BOARD_SIZE = 4
+BOARD_SIZE = 10
 EMPTY = 'O'
 
 

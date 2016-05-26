@@ -7,7 +7,6 @@ class Ship:
             else:
                 self.occup.append((self.row_idx + count, self.col_idx))
             count += 1
-            print(self.occup)
             if len(self.occup) == self.size:
                 break
 
